@@ -70,7 +70,7 @@ body {
 .detail01 h1 {
 	padding: 50px;
 	font-size:32px;
-	font-family:"ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-family:"ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	/*margin-bottom:30px;*/
 	font-weight:100;
 	letter-spacing:1px;
@@ -92,5 +92,52 @@ body {
 .detail01 .hero-content_intro{
 	line-height:35px;
 	margin-bottom:40px;
+}
+
+.detail02 {
+	height:850px;
+	/*background-image: url() no-repeat;*/
+	background-size: 50px 50px;
+	/*background-position: center;*/
+	
+}
+
+.detail02 .hero-content {
+	padding-top: 230px;
+}
+
+.detail02 .hero-content h1{
+	font-size:32px;
+	font-family:"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin-bottom:30px;
+	letter-spacing:1px;
+}
+
+.detail02 .hero-content_intro{
+	width:410px;
+}
+
+
+.detail03 {
+	height:710px;
+	/*background: url() no-repeat;*/
+	/*background-color: #A3A3C2;*/
+	background-position: center;
+}
+
+.detail03 .hero-content {
+	padding-top: 250px;
+}
+
+.detail03 .hero-content h1{
+	font-size:32px;
+	font-family:"ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic Pro", "メイリオ","ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin-bottom:30px;
+	letter-spacing:1px;
+}
+
+.detail03 .hero-content_detail{
+	width: 480px;
+	float: right;
 }
 
