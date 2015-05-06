@@ -9,13 +9,46 @@
             height: 400px;
         }
     </style>
+    <link rel="stylesheet" href="./foundation.css">
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="./js/gmaps.js"></script>
+    <script src="./gmaps.js"></script>
     <script src="http://cdn.mlkcca.com/v0.2.8/milkcocoa.js"></script>
     <script>
-        var dataStore = new MilkCocoa("https://io-hi5y48xhy.mlkcca.com").dataStore('chat');
+        var dataStore = new MilkCocoa("https://{YOUR APP ID}.mlkcca.com").dataStore('chat');
+ 
+        var type = '';
+        function ryo(){
+            type = 'ryo';
+            alert("bとして位置情報を送信します。");
+        }
+        function maro(){
+            type = 'maro';
+            alert("bとして位置情報を送信します。");
+        }
  
         window.onload = function(){
+ 
+            setInterval(function(){
+                GMaps.geolocate({
+                    success: function(position) {
+                        dataStore.send({
+                            lat : position.coords.latitude,
+                            lon : position.coords.longitude,
+                            type: type
+                        });
+                    },
+                    error: function(error) {
+                        console.log('Geolocation failed: '+error.message);
+                    },
+                    not_supported: function() {
+                        console.log('Your browser does not support geolocation');
+                    },
+                    always: function() {
+                        console.log('done');
+                    }
+                });
+            },5000);
+ 
  
             var lat = 35.710285;
             var lng = 139.77714;
@@ -54,5 +87,11 @@
 </head>
 <body>
 <div id="map"></div>
+<button onClick="ryo()">
+    a
+</button>
+<button onClick="maro()">
+    b
+</button>
 </body>
 </html>
