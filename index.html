@@ -1,14 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>simple chat!</title>
-  <script src="http://cdn.mlkcca.com/v0.2.7/milkcocoa.js"></script>
-  <script src="main.js"></script>
+    <meta charset="utf-8">
+    <title>gmapsサンプル</title>
+    <style>
+        @charset "utf-8";
+        #map {
+            height: 400px;
+        }
+    </style>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="./js/gmaps.js"></script>
+    <script src="http://cdn.mlkcca.com/v0.2.8/milkcocoa.js"></script>
+    <script>
+        var dataStore = new MilkCocoa("https://io-hi5y48xhy.mlkcca.com").dataStore('chat');
+ 
+        window.onload = function(){
+ 
+            var lat = 35.710285;
+            var lng = 139.77714;
+            var map = new GMaps({
+                div: "#map",
+                lat: lat,
+                lng: lng,
+                zoom: 17
+            });
+ 
+            dataStore.on('send', function(data) {
+                var lat = data.value.lat, lng = data.value.lon;
+ 
+                var img = '';
+                if(data.value.type == 'ryo'){
+                    img = 'http://i.gyazo.com/7502afdcf0bbcc1f6d8f3d85e66616f6.png';
+                }else if(data.value.type == 'maro'){
+                    img = 'http://i.gyazo.com/f7b2e1dac073595c3e53a260413aec14.png';
+                }
+ 
+                map.setCenter(lat, lng);
+                map.addMarker({
+                    lat: lat,
+                    lng: lng,
+                    title: "LIG社員",
+                    icon: img,
+                    infoWindow: {
+                        content: "<p>LIG社員は<br/>ココだよ!</p>"
+                    }
+                });
+                console.log('recieve',data.value);
+            });
+ 
+        };
+    </script>
 </head>
 <body>
-  <textarea name="" id="msg" cols="30" rows="4"></textarea>
-  <button name="button" onClick="clickEvent()">send message!</button>
-  <ul id="board"></ul>
+<div id="map"></div>
 </body>
 </html>
