@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+* {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  /*background: #FF9B54;*/
+}
+
+body {
+  color: #555;
+  font: 12px verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  line-height: 1.5;
+  border-top: 3px solid #96b54c;
+  background: #fff;
+   -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-justify: inter-ideograph;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: #FF9B54;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  &:hover {
+    color: #FF513B;
+  }
+  &:active, &:focus {
+    outline: 0;
+  }
+}
+.clearfix {
+  *zoom: 1;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.sp {
+  display: none;
+}
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*   layout    */
+#wrapper {
+  margin: 0 auto;
+}
+
+#main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*     header   */
+#header {
+  background-color: #fff;
+  border-top: 1px solid #95b45c;
+  border-bottom: 1px solid #96b54c;
+  .header-inner {
+    padding: 0 7rem;
+    .logo {
+      padding-top: 1rem;
+      margin-left: 1rem;
+      float: left;
+      h1 {
+        font-size: 1.5rem;
+        color: #999;
+      }
+      p {
+        float: left;
+        font-size: 12px;
+      }
+    }
+    .main-navigation {
+      float: right;
+      margin-left: 3rem;
+      /*nav {*/
+        /*padding: 1rem;*/
+        ul {
+          float: right;
+          li {
+            float: left;
+            text-align: center;
+            background-color: #fff;
+            a {
+              border-left: 1px solid #96b54c;
+              border-right: 1px solid #96b54c;
+              text-decoration: none;
+              color: #96b54c;
+              display: block;
+              padding: 35px 0px;
+              width: 95px;
+              line-height: 1.2;
+              &:hover {
+                background-color: #56789c;
+                color: #fff;
+                border-left: 1px solid #56789c;
+                border-right: 1px solid #56789c;
+              }
+            }
+          }
+        }
+      /*}*/
+    }
+  }
+}
+
+
+/*     top    */
+#top {
+  #section {
+    background-color: #96b54c;
+    font-size: 10px;
+    color: #fff;
+  }
+  #main-banner {
+    background-image: url(../images/top.jpg);
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 60vh;
+    .container {
+      width: 1180px;
+      padding: 1rem 0;
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+      }
+      p {
+        width: 50%;
+        padding-top: 4rem;
+        font-size: 1.6rem;
+        color: #999;
+      }
+    }
+  }
+  #main {
+    #top-greeting {
+      width: 100%;
+      .container {
+        padding: 3rem 0 5rem; 
+      }
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #96b54c;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      article {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 1rem;
+        text-align: center;
+        p {
+          line-height: 2.0;
+          padding: 1rem 0;
+          font-size: 14px;
+        }
+      }
+    }
+    #top-menu-category {
+      /*background-color: #ededed;*/
+      .container {
+        padding: 3rem 0 5rem;
+      }
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #96b54c;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .category-box {
+        width: 95%;
+        margin: 3.5rem auto;
+        position: relative;
+        ul {
+          width: 970px;
+          margin: 0 auto;
+          li {
+            float: left;
+            /*display: inline-block;*/
+            position: relative;
+            width: 200px;
+            height: 140px;
+            margin: 20px;
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
