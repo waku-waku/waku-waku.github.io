@@ -18,8 +18,9 @@ body {
   color: #555;
   font: 12px verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
   line-height: 1.5;
-  border-top: 3px solid #96b54c;
+  // border-top: 3px solid #96b54c;
   background: #fff;
+  background: rgba(56,56,56,0.8);
    -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-justify: inter-ideograph;
@@ -73,144 +74,29 @@ a {
 
 /*     header   */
 #header {
-  background-color: #fff;
-  border-top: 1px solid #95b45c;
-  border-bottom: 1px solid #96b54c;
-  .header-inner {
-    padding: 0 7rem;
-    .logo {
-      padding-top: 1rem;
-      margin-left: 1rem;
-      float: left;
-      h1 {
-        font-size: 1.5rem;
-        color: #999;
-      }
-      p {
-        float: left;
-        font-size: 12px;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  .h-inner {
+    width: 90%;
+    margin: 0 auto;
+    h1 {
+      a {
+        font-size: 1.6rem;
       }
     }
-    .main-navigation {
-      float: right;
-      margin-left: 3rem;
-      /*nav {*/
-        /*padding: 1rem;*/
-        ul {
-          float: right;
-          li {
-            float: left;
-            text-align: center;
-            background-color: #fff;
-            a {
-              border-left: 1px solid #96b54c;
-              border-right: 1px solid #96b54c;
-              text-decoration: none;
-              color: #96b54c;
-              display: block;
-              padding: 35px 0px;
-              width: 95px;
-              line-height: 1.2;
-              &:hover {
-                background-color: #56789c;
-                color: #fff;
-                border-left: 1px solid #56789c;
-                border-right: 1px solid #56789c;
-              }
-            }
-          }
-        }
-      /*}*/
-    }
+
   }
 }
 
-
-/*     top    */
-#top {
-  #section {
-    background-color: #96b54c;
-    font-size: 10px;
+.m-banner {
+  position: relative;
+  // margin-top: 2.0rem;
+  padding: 5rem;
+  text-align: center;
+  p {
+    font-size: 3.0rem;
     color: #fff;
-  }
-  #main-banner {
-    background-image: url(../images/top.jpg);
-    background-size: 100%;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 60vh;
-    .container {
-      width: 1180px;
-      padding: 1rem 0;
-      h1 {
-        font-size: 4rem;
-        color: #fff;
-      }
-      p {
-        width: 50%;
-        padding-top: 4rem;
-        font-size: 1.6rem;
-        color: #999;
-      }
-    }
-  }
-  #main {
-    #top-greeting {
-      width: 100%;
-      .container {
-        padding: 3rem 0 5rem; 
-      }
-      h1 {
-        text-align: center;
-        border-bottom: 2px solid #96b54c;
-        font-size: 25px;
-        font-weight: 600;
-      }
-      article {
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 1rem;
-        text-align: center;
-        p {
-          line-height: 2.0;
-          padding: 1rem 0;
-          font-size: 14px;
-        }
-      }
-    }
-    #top-menu-category {
-      /*background-color: #ededed;*/
-      .container {
-        padding: 3rem 0 5rem;
-      }
-      h1 {
-        text-align: center;
-        border-bottom: 2px solid #96b54c;
-        font-size: 25px;
-        font-weight: 600;
-      }
-      .category-box {
-        width: 95%;
-        margin: 3.5rem auto;
-        position: relative;
-        ul {
-          width: 970px;
-          margin: 0 auto;
-          li {
-            float: left;
-            /*display: inline-block;*/
-            position: relative;
-            width: 200px;
-            height: 140px;
-            margin: 20px;
-            img {
-              max-width: 100%;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
