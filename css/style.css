@@ -1,5 +1,11 @@
 @charset "UTF-8";
-/* line 3, ../style.scss */
+@font-face {
+  font-family: 'FlexDisplay-Thin';
+  src: url("../fonts/FlexDisplay-Thin.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 11, ../style.scss */
 * {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10,33 +16,34 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 13, ../style.scss */
+/* line 21, ../style.scss */
 html {
-  /*background: #FF9B54;*/
+  width: 100%;
+  height: 100%;
 }
 
-/* line 17, ../style.scss */
+/* line 26, ../style.scss */
 body {
-  color: #555;
-  font: 12px verdana,"ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN","メイリオ","Meiryo","ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  width: 100%;
+  height: 100%;
+  font-family: "FlexDisplay-Thin";
   line-height: 1.5;
-  background: #fff;
-  background: rgba(56, 56, 56, 0.8);
+  color: #555;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-justify: inter-ideograph;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 29, ../style.scss */
+/* line 40, ../style.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 33, ../style.scss */
+/* line 44, ../style.scss */
 a {
-  color: #FF9B54;
+  color: #ff513b;
   text-decoration: none;
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
@@ -44,75 +51,403 @@ a {
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-/* line 41, ../style.scss */
+/* line 52, ../style.scss */
 a:hover {
-  color: #FF513B;
+  color: #ff9b54;
 }
-/* line 44, ../style.scss */
+/* line 55, ../style.scss */
 a:active, a:focus {
   outline: 0;
 }
 
-/* line 48, ../style.scss */
+/* line 59, ../style.scss */
 .clearfix {
   *zoom: 1;
 }
-/* line 50, ../style.scss */
+/* line 61, ../style.scss */
 .clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 56, ../style.scss */
+/* line 68, ../style.scss */
+.content {
+  padding: 6rem 0rem 5rem;
+}
+
+/* line 72, ../style.scss */
+.heading {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+/* line 80, ../style.scss */
+.heading:after {
+  width: 120px;
+  position: absolute;
+  bottom: 0px;
+  left: 44.8%;
+  content: " ";
+  height: 3%;
+  background: #ff513b;
+}
+
+/*   layout    */
+/* line 92, ../style.scss */
 .sp {
   display: none;
 }
 
-/* line 59, ../style.scss */
+/* line 95, ../style.scss */
 .container {
-  width: 1180px;
+  width: 80%;
   margin: 0 auto;
   padding: 0;
 }
 
-/*   layout    */
-/* line 66, ../style.scss */
-#wrapper {
-  margin: 0 auto;
-}
-
-/* line 70, ../style.scss */
+/* line 101, ../style.scss */
 #main {
   width: 100%;
   margin: 0 auto;
 }
 
-/*     header   */
-/* line 76, ../style.scss */
-#header {
-  position: absolute;
+/* line 106, ../style.scss */
+.overlay {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: transparent;
-}
-/* line 80, ../style.scss */
-#header .h-inner {
-  width: 90%;
-  margin: 0 auto;
-}
-/* line 84, ../style.scss */
-#header .h-inner h1 a {
-  font-size: 1.6rem;
+  height: 100%;
+  z-index: 9998;
 }
 
-/* line 92, ../style.scss */
-.m-banner {
+/* line 117, ../style.scss */
+#bg-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+/*     header   */
+/* line 127, ../style.scss */
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.25s;
+  z-index: 1000;
+}
+/* line 136, ../style.scss */
+#header .header-wrapper {
   position: relative;
-  padding: 5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 141, ../style.scss */
+#header .header-wrapper .hamburger {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 1.1rem;
+}
+/* line 148, ../style.scss */
+#header .header-wrapper .hamburger .line-wrapper .line {
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: #111;
+}
+/* line 157, ../style.scss */
+#header .header-wrapper .navigation ul {
+  margin: 0 auto;
   text-align: center;
 }
-/* line 97, ../style.scss */
-.m-banner p {
-  font-size: 3.0rem;
+/* line 160, ../style.scss */
+#header .header-wrapper .navigation ul li {
+  width: 15%;
+  display: inline-block;
+}
+/* line 163, ../style.scss */
+#header .header-wrapper .navigation ul li a {
+  vertical-align: baseline;
+  display: block;
+  font-size: 1.3rem;
+  padding: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #334;
+}
+/* line 175, ../style.scss */
+#header .header-wrapper .search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 1.65rem;
+}
+/* line 181, ../style.scss */
+#header .header-wrapper .search i {
+  font-size: 1.4rem;
   color: #fff;
+}
+
+/* line 189, ../style.scss */
+.top-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* line 198, ../style.scss */
+#top {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 10rem 0 0;
+}
+/* line 204, ../style.scss */
+#top .top-wrapper {
+  padding: 10rem;
+  border: 5px solid #344;
+}
+/* line 207, ../style.scss */
+#top .top-wrapper .top-box {
+  text-align: center;
+}
+/* line 209, ../style.scss */
+#top .top-wrapper .top-box p {
+  text-shadow: 0 0 30px #fff, 0 0 30px #fff;
+  font-size: 4.5rem;
+  letter-spacing: 3px;
+  font-weight: 900;
+  color: #fff;
+}
+/* line 215, ../style.scss */
+#top .top-wrapper .top-box p:hover {
+  text-shadow: none;
+}
+
+/* line 226, ../style.scss */
+#about h2 {
+  color: #fff;
+}
+/* line 229, ../style.scss */
+#about .about-content {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
+  width: 70%;
+  margin: 3rem auto;
+  border-radius: 5px;
+  font-family: "メイリオ";
+  color: #fff;
+}
+/* line 237, ../style.scss */
+#about .about-content .about-card {
+  padding: 2rem 3rem;
+}
+/* line 240, ../style.scss */
+#about .about-content .about-card dl dt {
+  padding-top: 0.5rem;
+  font-weight: 900;
+}
+/* line 244, ../style.scss */
+#about .about-content .about-card dl dd {
+  padding-left: 1rem;
+}
+/* line 248, ../style.scss */
+#about .about-content .about-card .thumb {
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem 1rem 0;
+  float: right;
+  overflow: hidden;
+  border-radius: 50%;
+}
+/* line 255, ../style.scss */
+#about .about-content .about-card .thumb img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+/* line 265, ../style.scss */
+#community {
+  background: #fff;
+  color: #fff;
+}
+/* line 268, ../style.scss */
+#community h2 {
+  color: #111;
+}
+/* line 271, ../style.scss */
+#community .community-content {
+  background: rgba(54, 54, 54, 0.85);
+  width: 70%;
+  margin: 3rem auto;
+  border-radius: 5px;
+}
+/* line 276, ../style.scss */
+#community .community-content .community-card {
+  display: table;
+  padding: 3rem 3rem 2rem;
+}
+/* line 279, ../style.scss */
+#community .community-content .community-card .discription {
+  display: table-cell;
+  width: 45%;
+  padding: 0 3rem 0 1rem;
+  vertical-align: top;
+}
+/* line 284, ../style.scss */
+#community .community-content .community-card .discription h3 {
+  font-size: 3.0rem;
+  letter-spacing: 1px;
+}
+/* line 288, ../style.scss */
+#community .community-content .community-card .discription p {
+  padding: 2rem 0 0 0;
+  line-height: 2.0;
+}
+/* line 293, ../style.scss */
+#community .community-content .community-card .thumb {
+  display: table-cell;
+  width: 33%;
+  height: 255px;
+  overflow: hidden;
+}
+/* line 298, ../style.scss */
+#community .community-content .community-card .thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 308, ../style.scss */
+#contact {
+  background: rgba(54, 54, 54, 0.8);
+  color: #fff;
+}
+/* line 311, ../style.scss */
+#contact .contact-content {
+  width: 100%;
+  text-align: center;
+  margin: 3.0rem auto;
+}
+/* line 316, ../style.scss */
+#contact .contact-content .contact-means ul {
+  text-align: center;
+}
+/* line 319, ../style.scss */
+#contact .contact-content .contact-means ul li {
+  display: inline-block;
+  margin: 0 3.0rem;
+}
+/* line 322, ../style.scss */
+#contact .contact-content .contact-means ul li a {
+  font-size: 3.3rem;
+}
+/* line 325, ../style.scss */
+#contact .contact-content .contact-means ul li p {
+  font-size: 3.3rem;
+  color: #ff513b;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+/* line 334, ../style.scss */
+#contact .contact-content .contact-means ul li p:hover {
+  color: #ff9b54;
+}
+/* line 337, ../style.scss */
+#contact .contact-content .contact-means ul li p:active, #contact .contact-content .contact-means ul li p:focus {
+  outline: 0;
+}
+/* line 344, ../style.scss */
+#contact .contact-content form {
+  position: fixed;
+  top: 18%;
+  left: 26%;
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 9999;
+}
+/* line 353, ../style.scss */
+#contact .contact-content form label {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 1.0rem;
+}
+/* line 358, ../style.scss */
+#contact .contact-content form input[type="text"],
+#contact .contact-content form textarea {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  padding: 1.0rem;
+  outline: none;
+  /* background-color: rgba(255,255,255,0.05); */
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0;
+  font-size: 1.0rem;
+  color: #fff;
+}
+/* line 372, ../style.scss */
+#contact .contact-content form textarea {
+  height: 13rem;
+}
+/* line 375, ../style.scss */
+#contact .contact-content form .submit {
+  background: transparent;
+  display: block;
+  width: 30%;
+  margin: 3rem auto 0;
+  padding: 1.0rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  outline: none;
+  font-family: "メイリオ";
+  border-radius: 0;
+  color: #fff;
+}
+/* line 386, ../style.scss */
+#contact .contact-content form .submit:active {
+  background: #fff;
+  color: #111;
+}
+
+/* line 395, ../style.scss */
+#footer {
+  background: #111;
+  padding-top: 1.0rem;
+  padding-bottom: 1.0rem;
+}
+/* line 399, ../style.scss */
+#footer .footer-content {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 402, ../style.scss */
+#footer .footer-content .copyright {
+  text-align: center;
+  font-family: "メイリオ";
+  font-weight: 900;
+  padding-bottom: 0.1rem;
 }
