@@ -24,6 +24,7 @@ html {
 
 /* line 26, ../style.scss */
 body {
+  background: #111;
   width: 100%;
   height: 100%;
   font-family: "FlexDisplay-Thin";
@@ -35,13 +36,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 40, ../style.scss */
+/* line 41, ../style.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 44, ../style.scss */
+/* line 45, ../style.scss */
 a {
   color: #ff513b;
   text-decoration: none;
@@ -51,32 +52,32 @@ a {
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-/* line 52, ../style.scss */
+/* line 53, ../style.scss */
 a:hover {
   color: #ff9b54;
 }
-/* line 55, ../style.scss */
+/* line 56, ../style.scss */
 a:active, a:focus {
   outline: 0;
 }
 
-/* line 59, ../style.scss */
+/* line 60, ../style.scss */
 .clearfix {
   *zoom: 1;
 }
-/* line 61, ../style.scss */
+/* line 62, ../style.scss */
 .clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 68, ../style.scss */
+/* line 69, ../style.scss */
 .content {
   padding: 6rem 0rem 5rem;
 }
 
-/* line 72, ../style.scss */
+/* line 73, ../style.scss */
 .heading {
   width: 80%;
   text-align: center;
@@ -86,7 +87,7 @@ a:active, a:focus {
   letter-spacing: 3px;
   font-weight: 900;
 }
-/* line 80, ../style.scss */
+/* line 81, ../style.scss */
 .heading:after {
   width: 120px;
   position: absolute;
@@ -98,25 +99,25 @@ a:active, a:focus {
 }
 
 /*   layout    */
-/* line 92, ../style.scss */
+/* line 93, ../style.scss */
 .sp {
   display: none;
 }
 
-/* line 95, ../style.scss */
+/* line 96, ../style.scss */
 .container {
   width: 80%;
   margin: 0 auto;
   padding: 0;
 }
 
-/* line 101, ../style.scss */
+/* line 102, ../style.scss */
 #main {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 106, ../style.scss */
+/* line 107, ../style.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.9);
   display: none;
@@ -128,7 +129,7 @@ a:active, a:focus {
   z-index: 9998;
 }
 
-/* line 117, ../style.scss */
+/* line 118, ../style.scss */
 #bg-img {
   position: fixed;
   width: 100%;
@@ -139,7 +140,7 @@ a:active, a:focus {
 }
 
 /*     header   */
-/* line 127, ../style.scss */
+/* line 128, ../style.scss */
 #header {
   position: fixed;
   width: 100%;
@@ -148,14 +149,14 @@ a:active, a:focus {
   transition: background-color 0.25s;
   z-index: 1000;
 }
-/* line 136, ../style.scss */
+/* line 137, ../style.scss */
 #header .header-wrapper {
   position: relative;
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 141, ../style.scss */
+/* line 142, ../style.scss */
 #header .header-wrapper .hamburger {
   display: none;
   position: absolute;
@@ -163,24 +164,24 @@ a:active, a:focus {
   left: 0;
   padding-top: 1.1rem;
 }
-/* line 148, ../style.scss */
+/* line 149, ../style.scss */
 #header .header-wrapper .hamburger .line-wrapper .line {
   width: 20px;
   height: 2px;
   margin-top: 5px;
   background-color: #111;
 }
-/* line 157, ../style.scss */
+/* line 158, ../style.scss */
 #header .header-wrapper .navigation ul {
   margin: 0 auto;
   text-align: center;
 }
-/* line 160, ../style.scss */
+/* line 161, ../style.scss */
 #header .header-wrapper .navigation ul li {
   width: 15%;
   display: inline-block;
 }
-/* line 163, ../style.scss */
+/* line 164, ../style.scss */
 #header .header-wrapper .navigation ul li a {
   vertical-align: baseline;
   display: block;
@@ -190,20 +191,20 @@ a:active, a:focus {
   letter-spacing: 2px;
   color: #334;
 }
-/* line 175, ../style.scss */
+/* line 176, ../style.scss */
 #header .header-wrapper .search {
   position: absolute;
   top: 0;
   right: 0;
   padding-top: 1.65rem;
 }
-/* line 181, ../style.scss */
+/* line 182, ../style.scss */
 #header .header-wrapper .search i {
   font-size: 1.4rem;
   color: #fff;
 }
 
-/* line 189, ../style.scss */
+/* line 190, ../style.scss */
 .top-img {
   position: absolute;
   top: 0;
@@ -212,23 +213,23 @@ a:active, a:focus {
   z-index: 1;
 }
 
-/* line 198, ../style.scss */
+/* line 199, ../style.scss */
 #top {
   width: 100%;
   height: 100%;
   overflow: hidden;
   padding: 10rem 0 0;
 }
-/* line 204, ../style.scss */
+/* line 205, ../style.scss */
 #top .top-wrapper {
   padding: 10rem;
   border: 5px solid #344;
 }
-/* line 207, ../style.scss */
+/* line 208, ../style.scss */
 #top .top-wrapper .top-box {
   text-align: center;
 }
-/* line 209, ../style.scss */
+/* line 210, ../style.scss */
 #top .top-wrapper .top-box p {
   text-shadow: 0 0 30px #fff, 0 0 30px #fff;
   font-size: 4.5rem;
@@ -236,16 +237,16 @@ a:active, a:focus {
   font-weight: 900;
   color: #fff;
 }
-/* line 215, ../style.scss */
+/* line 216, ../style.scss */
 #top .top-wrapper .top-box p:hover {
   text-shadow: none;
 }
 
-/* line 226, ../style.scss */
+/* line 227, ../style.scss */
 #about h2 {
   color: #fff;
 }
-/* line 229, ../style.scss */
+/* line 230, ../style.scss */
 #about .about-content {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 3px rgba(255, 255, 255, 0.9);
@@ -255,20 +256,20 @@ a:active, a:focus {
   font-family: "メイリオ";
   color: #fff;
 }
-/* line 237, ../style.scss */
+/* line 238, ../style.scss */
 #about .about-content .about-card {
   padding: 2rem 3rem;
 }
-/* line 240, ../style.scss */
+/* line 241, ../style.scss */
 #about .about-content .about-card dl dt {
   padding-top: 0.5rem;
   font-weight: 900;
 }
-/* line 244, ../style.scss */
+/* line 245, ../style.scss */
 #about .about-content .about-card dl dd {
   padding-left: 1rem;
 }
-/* line 248, ../style.scss */
+/* line 249, ../style.scss */
 #about .about-content .about-card .thumb {
   width: 200px;
   height: 200px;
@@ -277,89 +278,89 @@ a:active, a:focus {
   overflow: hidden;
   border-radius: 50%;
 }
-/* line 255, ../style.scss */
+/* line 256, ../style.scss */
 #about .about-content .about-card .thumb img {
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
 
-/* line 265, ../style.scss */
+/* line 266, ../style.scss */
 #community {
   background: #fff;
   color: #fff;
 }
-/* line 268, ../style.scss */
+/* line 269, ../style.scss */
 #community h2 {
   color: #111;
 }
-/* line 271, ../style.scss */
+/* line 272, ../style.scss */
 #community .community-content {
   background: rgba(54, 54, 54, 0.85);
   width: 70%;
   margin: 3rem auto;
   border-radius: 5px;
 }
-/* line 276, ../style.scss */
+/* line 277, ../style.scss */
 #community .community-content .community-card {
   display: table;
   padding: 3rem 3rem 2rem;
 }
-/* line 279, ../style.scss */
+/* line 280, ../style.scss */
 #community .community-content .community-card .discription {
   display: table-cell;
   width: 45%;
   padding: 0 3rem 0 1rem;
   vertical-align: top;
 }
-/* line 284, ../style.scss */
+/* line 285, ../style.scss */
 #community .community-content .community-card .discription h3 {
   font-size: 3.0rem;
   letter-spacing: 1px;
 }
-/* line 288, ../style.scss */
+/* line 289, ../style.scss */
 #community .community-content .community-card .discription p {
   padding: 2rem 0 0 0;
   line-height: 2.0;
 }
-/* line 293, ../style.scss */
+/* line 294, ../style.scss */
 #community .community-content .community-card .thumb {
   display: table-cell;
   width: 33%;
   height: 255px;
   overflow: hidden;
 }
-/* line 298, ../style.scss */
+/* line 299, ../style.scss */
 #community .community-content .community-card .thumb img {
   width: 100%;
   height: 100%;
 }
 
-/* line 308, ../style.scss */
+/* line 309, ../style.scss */
 #contact {
   background: rgba(54, 54, 54, 0.8);
   color: #fff;
 }
-/* line 311, ../style.scss */
+/* line 312, ../style.scss */
 #contact .contact-content {
   width: 100%;
   text-align: center;
   margin: 3.0rem auto;
 }
-/* line 316, ../style.scss */
+/* line 317, ../style.scss */
 #contact .contact-content .contact-means ul {
   text-align: center;
 }
-/* line 319, ../style.scss */
+/* line 320, ../style.scss */
 #contact .contact-content .contact-means ul li {
   display: inline-block;
   margin: 0 3.0rem;
 }
-/* line 322, ../style.scss */
+/* line 323, ../style.scss */
 #contact .contact-content .contact-means ul li a {
   font-size: 3.3rem;
 }
-/* line 325, ../style.scss */
+/* line 326, ../style.scss */
 #contact .contact-content .contact-means ul li p {
   font-size: 3.3rem;
   color: #ff513b;
@@ -370,15 +371,15 @@ a:active, a:focus {
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-/* line 334, ../style.scss */
+/* line 335, ../style.scss */
 #contact .contact-content .contact-means ul li p:hover {
   color: #ff9b54;
 }
-/* line 337, ../style.scss */
+/* line 338, ../style.scss */
 #contact .contact-content .contact-means ul li p:active, #contact .contact-content .contact-means ul li p:focus {
   outline: 0;
 }
-/* line 344, ../style.scss */
+/* line 345, ../style.scss */
 #contact .contact-content form {
   position: fixed;
   top: 18%;
@@ -389,13 +390,13 @@ a:active, a:focus {
   text-align: center;
   z-index: 9999;
 }
-/* line 353, ../style.scss */
+/* line 354, ../style.scss */
 #contact .contact-content form label {
   display: block;
   font-size: 2.5rem;
   margin-bottom: 1.0rem;
 }
-/* line 358, ../style.scss */
+/* line 359, ../style.scss */
 #contact .contact-content form input[type="text"],
 #contact .contact-content form textarea {
   display: block;
@@ -410,11 +411,11 @@ a:active, a:focus {
   font-size: 1.0rem;
   color: #fff;
 }
-/* line 372, ../style.scss */
+/* line 373, ../style.scss */
 #contact .contact-content form textarea {
   height: 13rem;
 }
-/* line 375, ../style.scss */
+/* line 376, ../style.scss */
 #contact .contact-content form .submit {
   background: transparent;
   display: block;
@@ -427,24 +428,24 @@ a:active, a:focus {
   border-radius: 0;
   color: #fff;
 }
-/* line 386, ../style.scss */
+/* line 387, ../style.scss */
 #contact .contact-content form .submit:active {
   background: #fff;
   color: #111;
 }
 
-/* line 395, ../style.scss */
+/* line 396, ../style.scss */
 #footer {
   background: #111;
   padding-top: 1.0rem;
   padding-bottom: 1.0rem;
 }
-/* line 399, ../style.scss */
+/* line 400, ../style.scss */
 #footer .footer-content {
   width: 70%;
   margin: 0 auto;
 }
-/* line 402, ../style.scss */
+/* line 403, ../style.scss */
 #footer .footer-content .copyright {
   text-align: center;
   font-family: "メイリオ";
