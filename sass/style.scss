@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'FlexDisplay-Thin';
+  src: url('../fonts/FlexDisplay-Thin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'RawengulkUltralight';
+	src: url('../fonts/RawengulkUltralight.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust:100%;
+	// font-family: ""
+}
+
+a {
+	color: darkgreen;
+	text-decoration: none;
+	&:hover {
+		color: #779e4e;
+		text-shadow: 0 0 30px darkgreen, 0 0 30px darkgreen;
+	}
+}
+
+// 共通クラス
+
+.container {
+	width: 90%;
+	margin:  0 auto;
+	position: relative;
+}
+
+.sp {
+  	display: none;
+}
+.pc {
+  	display: block;
+}
+
+.heading {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	font-size: 2.5rem;
+	letter-spacing: 3px;
+	font-weight: 900;
+	color: #fff;
+	&:after {
+		width: 120px;
+	    position: absolute;
+	    bottom: -7px;
+	    left: 0%;
+	    content: " ";
+	    height: 3%;
+	    background: #ff513b;
+	}
+}
+
+#bg-gl {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	canvas {
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+
+#header {
+	position: absolute;
+	display: block;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: transparent;
+	font-family: 'RawengulkUltralight';
+	h1 {
+		width: 100%;
+		a {
+			font-size: 5.3rem;
+			letter-spacing: 2px;
+			color: #fff;
+		}
+	}
+}
+
+#navigator {
+	position: absolute;
+	display: block;
+	top: 32rem;
+	left: 0;
+	width: 100%;
+	// padding-left: 3.8rem; 
+	ul {
+		li {
+			position: relative;
+			margin: .1rem;
+			color: #fff;
+			span {
+				position: absolute;
+				top: 5px;
+				left: 0;
+				font-size: 1.5rem;
+				font-weight: 900;
+			}
+			p {
+				display: inline-block;
+				font-family: 'RawengulkUltralight';
+				padding-left: 1.0rem;
+				font-weight: 900;
+				font-size: 1.8rem;
+				color: #fff;
+				font-weight: 900;
+				// text-shadow: 0 0 0 white,
+	   //             3.5rem .7rem .3rem white;
+	            &:hover {
+					color: #779e4e;
+					text-shadow: 0 0 30px white, 0 0 30px white;
+					
+				}
+			}
+		}
+	}
+}
+
+#category {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 999;
+	#about {
+		display: none;
+		background: rgba(255,255,255,0.2);
+		position: relative;
+		border: 1px solid #eee;
+		width: 60%;
+		height: 70%;
+		padding: 1.5rem 0;
+		margin: 7rem auto 0;
+		overflow-y: scroll;
+		transition: border-wdth 1.25s;
+		z-index: 998;
+		.profile {
+			dl {
+				width: 100%;
+				color: #fff;
+				padding-top: 3rem;
+				dt {
+					font-size: 1.3rem;
+				}
+				dd {
+					font-size: 1.0rem;
+					width: 90%;
+					margin: 0 auto 1rem;
+				}
+			}
+			.thumb {
+				width: 300px;
+				height: 300px;
+				overflow: hidden;
+				float: right;
+				border-radius: 50%;
+				img {
+					opacity: 0.5;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.profile-icon {
+			padding: 3rem 0 0 1rem;
+		}
+	}
+
+	#skill {
+		display: none;
+		background: rgba(255,255,255,0.2);
+		position: relative;
+		border: 1px solid #eee;
+		width: 60%;
+		height: 70%;
+		padding: 1.5rem 0;
+		margin: 7rem auto 0;
+		overflow: hidden;
+		transition: border-wdth 1.25s;
+		z-index: 998;
+		.skill {
+			dl {
+				width: 100%;
+				color: #fff;
+				padding-top: 3rem;
+				dt {
+					font-size: 1.3rem;
+				}
+				dd {
+					font-size: 1.0rem;
+					width: 90%;
+					margin: 0 auto 1rem;
+				}
+			}
+		}
+	}
+
+	#portfolio {
+		display: none;
+		background: rgba(255,255,255,0.2);
+		position: relative;
+		border: 1px solid #eee;
+		width: 60%;
+		height: 70%;
+		padding: 1.5rem 0;
+		margin: 7rem auto 0;
+		overflow: hidden;
+		transition: border-wdth 1.25s;
+		z-index: 998;
+		p {
+			width: 90%;
+			margin: 0 auto;
+			padding-top: 3rem;
+			font-size: 1.3rem;
+			color: #fff;
+		}
+	}
+
+	#community {
+		display: none;
+		background: rgba(255,255,255,0.2);
+		position: relative;
+		border: 1px solid #eee;
+		width: 60%;
+		height: 70%;
+		padding: 1.5rem 0;
+		margin: 7rem auto 0;
+		overflow: hidden;
+		transition: border-wdth 1.25s;
+		z-index: 998;
+	}
+
+	#contact {
+		display: none;
+		background: rgba(255,255,255,0.2);
+		position: relative;
+		border: 1px solid #eee;
+		width: 60%;
+		height: 70%;
+		padding: 1.5rem 0;
+		margin: 7rem auto 0;
+		overflow: hidden;
+		transition: border-wdth 1.25s;
+		z-index: 998;
+	}
+	
+	#modal-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.9);
+		z-index: 997;
+	}
+
+}
+
+#footer {
+	display: block;
+	position: absolute;
+	bottom: 7px;
+	right: 8px;
+}
+
+#copyright {
+	background: transparent;
+	color: #fff;
+	font-size: 0.1rem;
+	padding-left: 0.5rem;
+	border-left: 1px dotted #fff; 
+}
+
+@keyframes copyright { /*「fadeIn」と名前をそろえる*/
+    0% {opacity: 0} /*アニメーション開始時は完全に透過*/
+    100% {opacity: 1} /*アニメーション終了時は透過しない*/
+}
+
+
+@media only screen and (max-width:768px) {
+	#header {
+		h1 {
+			padding: .3rem 0 0 0;
+			text-align: center;
+			a {
+				font-size: 3.4rem;
+			}
+		}
+	}
+
+	#navigator {
+		top: 80vw;
+		padding-left: 1.4rem;
+		ul {
+			li {
+				p {
+					font-size: 2.8rem;
+					padding-left: 1.5rem;
+				}
+				span {
+					top: 7px;
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+
+}
+
+@media only screen and (max-width:640px) {
+	.sp {
+		display: block;
+	}
+	.pc {
+		display: none;
+	}
+	.container {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.heading {
+		font-size: 1.5rem;
+	}
+
+	#header {
+		h1 {
+			padding: .3rem 0 0 0;
+			text-align: center;
+			a {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	#navigator {
+		top: 114vw;
+		padding-left: 5.5vw;
+		ul {
+			li {
+				p {
+					font-size: 1.2rem;
+					padding-left: 0.7rem;
+				}
+				span {
+					top: 6px;
+					font-size: .8rem;
+				}
+			}
+		}
+	}
+
+	#category {
+		#about {
+			width: 95%;
+			margin-top: 4rem;
+			.profile {
+				.thumb {
+					float: none;
+					margin: 2rem auto 0;
+				}
+				dl {
+					padding-top: 1rem;
+				}
+			}
+		}
+		#skill {
+			width: 95%;
+			margin-top: 4rem;
+		}
+		#portfolio {
+			width: 95%;
+			margin-top: 4rem;
+		}
+		#community {
+			width: 95%;
+			margin-top: 4rem;
+		}
+		#contact {
+			width: 95%;
+			margin-top: 4rem;
+		}
+	}
+
+	#footer {
+		width: 100%;
+		margin: 0 auto;
+		bottom: 4px;
+		right: 0;
+	}
+
+	#copyright {
+		border: 0;
+		padding: 0;
+		text-align: center;
+	}
+}

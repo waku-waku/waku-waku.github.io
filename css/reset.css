@@ -1,63 +1,169 @@
 @charset "utf-8";
 
-/* =Reset default browser CSS.
-Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
--------------------------------------------------------------- */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-style:normal;
+	font-family: inherit;
+    font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+	line-height: 1.5;
 }
 
-:focus {
-  outline: 0;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-ol, ul {
-  list-style: none;
-}
+img { vertical-align: text-bottom; }
 
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  font-weight: normal;
-  text-align: left;
-}
-
-blockquote {
-  &:before, &:after {
-    content: "";
-  }
-}
-
-q {
-  &:before, &:after {
-    content: "";
-  }
+html{
+    overflow-y: scroll;
 }
 
 blockquote, q {
-  quotes: "" "";
+	quotes: none;
 }
 
-a img {
-  border: 0;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 
-figure {
-  margin: 0;
+input, textarea,{
+	margin: 0;
+	padding: 0;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
+ol, ul{
+    list-style:none;
 }
+
+table{
+    border-collapse: collapse; 
+    border-spacing:0;
+}
+
+caption, th{
+    text-align: left;
+}
+
+a:focus {
+	outline:none;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	content: " "; 
+	display: block;
+	clear: both;
+}
+
+.both{
+	clear:both;
+}
+
+/* Fonts
+------------------------------------------------------------*/
+body {
+font-size: 90%; /* IE */
+font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,'ＭＳ Ｐゴシック', sans-serif;
+}
+html>/**/body { font-size: 12px; } /* Except IE */
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+/*テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+*/
+
+/*ボックスシャドウ {
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+*/
+
+/*ボックスシャドウ内側 {
+	-moz-box-shadow: inset 1px 1px 3px #000;
+	-webkit-box-shadow: inset 1px 1px 3px #000;
+	box-shadow: inset 1px 1px 3px #000;
+}
+*/
+
+/*角丸 {
+	border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px; 
+}
+*/
+
+/*トランジション {
+	-webkit-transition: 1.5s;
+	-moz-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+}
+*/
+
+/*透明 {
+	filter: alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+}
+*/
+
+/*背景のみ透明 {
+	background-color:rgba(255,255,255,0.2);
+}
+*/
+
+/*グラデーション {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000')";
+	background-image: -moz-linear-gradient(top, #ffffff, #000000);
+	background-image: -ms-linear-gradient(top, #ffffff, #000000);
+	background-image: -o-linear-gradient(top, #ffffff, #000000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#000000));
+	background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+	background-image: linear-gradient(top, #ffffff, #000000);
+}
+*/
+
+/*スマホ対応
+@media screen and (max-width: 480px){
+	
+}
+@media screen and (max-width: 320px){
+	
+}
+*/
