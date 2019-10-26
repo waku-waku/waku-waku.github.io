@@ -7,7 +7,7 @@ var height = window.parent.screen.height;
 
 // var mesh = new THREE.Mesh(geometry, material);
 
-var geometry = new THREE.BoxGeometry( 100, 100, 100 );
+var geometry = new THREE.BoxGeometry( 50, 50, 10 );
 var material = new THREE.MeshNormalMaterial();
 mesh = new THREE.Mesh( geometry, material );
 mesh.position.x = 1000;

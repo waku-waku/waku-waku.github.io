@@ -27,11 +27,11 @@ body {
 }
 
 a {
-	color: darkgreen;
+	color: #ed6f5f;
 	text-decoration: none;
 	&:hover {
-		color: #779e4e;
-		text-shadow: 0 0 30px darkgreen, 0 0 30px darkgreen;
+		color: #f54a33;
+		text-shadow: 0 0 30px #ed6f5f, 0 0 30px #ed6f5f;
 	}
 }
 
@@ -54,19 +54,10 @@ a {
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 	letter-spacing: 3px;
 	font-weight: 900;
-	color: #fff;
-	&:after {
-		width: 120px;
-	    position: absolute;
-	    bottom: -7px;
-	    left: 0%;
-	    content: " ";
-	    height: 3%;
-	    background: #ff513b;
-	}
+	color: #ff513b;
 }
 
 #bg-gl {
@@ -157,8 +148,8 @@ a {
 		position: relative;
 		border: 1px solid #eee;
 		width: 60%;
-		height: 70%;
-		padding: 1.5rem 0;
+		height: 80%;
+		padding: .5rem 0;
 		margin: 7rem auto 0;
 		overflow-y: scroll;
 		transition: border-wdth 1.25s;
@@ -169,12 +160,14 @@ a {
 				color: #fff;
 				padding-top: 3rem;
 				dt {
-					font-size: 1.3rem;
+					font-size: 1.0rem;
+					font-weight: bold;
 				}
 				dd {
-					font-size: 1.0rem;
+					font-size: .8rem;
 					width: 90%;
 					margin: 0 auto 1rem;
+					line-height: 2.0;
 				}
 			}
 			.thumb {
@@ -202,7 +195,7 @@ a {
 		border: 1px solid #eee;
 		width: 60%;
 		height: 70%;
-		padding: 1.5rem 0;
+		padding: .5rem 0;
 		margin: 7rem auto 0;
 		overflow: hidden;
 		transition: border-wdth 1.25s;
@@ -213,12 +206,14 @@ a {
 				color: #fff;
 				padding-top: 3rem;
 				dt {
-					font-size: 1.3rem;
+					font-size: 1.0rem;
+					font-weight: bold;
 				}
 				dd {
-					font-size: 1.0rem;
+					font-size: .8rem;
 					width: 90%;
 					margin: 0 auto 1rem;
+					line-height: 2.0;
 				}
 			}
 		}
@@ -230,7 +225,7 @@ a {
 		position: relative;
 		border: 1px solid #eee;
 		width: 60%;
-		height: 70%;
+		height: 80%;
 		padding: 1.5rem 0;
 		margin: 7rem auto 0;
 		overflow: hidden;
@@ -243,6 +238,23 @@ a {
 			font-size: 1.3rem;
 			color: #fff;
 		}
+		ul {
+			margin: 0rem 0 0 1rem;
+			list-style: disc;
+			color: #fff;
+			li {
+				margin-bottom: .5rem;
+				a {
+					color: #fff;
+				}
+			}
+		}
+		.attension-note {
+			display: block;
+			margin-top: 3rem;
+			color: #fff;
+			font-size: .5rem;
+		}
 	}
 
 	#community {
@@ -251,12 +263,23 @@ a {
 		position: relative;
 		border: 1px solid #eee;
 		width: 60%;
-		height: 70%;
+		height: 80%;
 		padding: 1.5rem 0;
 		margin: 7rem auto 0;
 		overflow: hidden;
 		transition: border-wdth 1.25s;
 		z-index: 998;
+		ul {
+			margin: 0rem 0 0 1rem;
+			list-style: disc;
+			color: #fff;
+			li {
+				margin-bottom: .5rem;
+				a {
+					color: #fff;
+				}
+			}
+		}
 	}
 
 	#contact {
@@ -265,12 +288,23 @@ a {
 		position: relative;
 		border: 1px solid #eee;
 		width: 60%;
-		height: 70%;
+		height: 80%;
 		padding: 1.5rem 0;
 		margin: 7rem auto 0;
 		overflow: hidden;
 		transition: border-wdth 1.25s;
 		z-index: 998;
+		ul {
+			margin: 0rem 0 0 1rem;
+			list-style: disc;
+			color: #fff;
+			li {
+				margin-bottom: .5rem;
+				a {
+					color: #fff;
+				}
+			}
+		}
 	}
 	
 	#modal-overlay {
@@ -349,7 +383,7 @@ a {
 	}
 
 	.heading {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 	}
 
 	#header {
@@ -396,10 +430,16 @@ a {
 		#skill {
 			width: 95%;
 			margin-top: 4rem;
+			.skill dl {
+				padding-top: 1rem;
+			}
 		}
 		#portfolio {
 			width: 95%;
 			margin-top: 4rem;
+			ul {
+				padding-top: 1rem;
+			}
 		}
 		#community {
 			width: 95%;
